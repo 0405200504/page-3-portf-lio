@@ -379,6 +379,20 @@ h1, h2, h3 {
     font-weight: 500;
 }
 
+.service-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.service-meta svg {
+    color: var(--accent-color);
+}
+
+.service-card.dark .service-meta svg {
+    color: var(--secondary-bg);
+}
+
 /* Transformation (Before/After) */
 .transformation {
     padding: 120px 0;
@@ -692,30 +706,23 @@ details p {
     color: #666;
 }
 
-/* Mobile FAB */
-.mobile-fab {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px;
-    background: var(--bg-color);
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
-    z-index: 999;
-}
 
-.mobile-fab .btn-primary {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
 
 /* Responsive */
 @media (max-width: 992px) {
     .hero-content {
-        flex-direction: column;
-        padding-top: 40px;
+        flex-direction: column-reverse;
+        padding-top: 20px;
+        gap: 30px;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .hero-text h1 {
@@ -724,7 +731,8 @@ details p {
     
     .hero-image {
         width: 100%;
-        height: 60vh;
+        height: 45vh;
+        min-height: 300px;
     }
     
     .steps-grid, .services-wrapper, .mistakes-grid, .testimonials-grid {
@@ -759,15 +767,6 @@ details p {
     
     .perception h2, .method h2, .services h2, .transformation h2, .mistakes h2, .testimonials h2, .faq h2, .final-cta h2 {
         font-size: 2.2rem;
-    }
-    
-    .mobile-fab {
-        display: block;
-    }
-    
-    /* Padding adjustments for mobile FAB */
-    body {
-        padding-bottom: 80px;
     }
     
     .navbar {
