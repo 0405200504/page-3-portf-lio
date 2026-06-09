@@ -169,29 +169,7 @@ h1, h2, h3 {
     object-fit: cover;
 }
 
-/* Decorative geometric mapping lines */
-.hero-image::before, .hero-image::after {
-    content: '';
-    position: absolute;
-    border: 1px dashed rgba(140, 74, 62, 0.4);
-    pointer-events: none;
-}
 
-.hero-image::before {
-    top: 20%;
-    left: -10%;
-    width: 120%;
-    height: 1px;
-    transform: rotate(15deg);
-}
-
-.hero-image::after {
-    top: 10%;
-    left: 30%;
-    width: 1px;
-    height: 80%;
-    transform: rotate(-5deg);
-}
 
 /* Perception Section */
 .perception {
