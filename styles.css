@@ -571,69 +571,78 @@ h1, h2, h3 {
 
 /* Professional Section */
 .professional {
-    padding: 100px 0;
+    padding: 120px 0;
     background-color: var(--primary-color);
     color: var(--bg-color);
 }
 
-.professional h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 60px;
-    color: var(--secondary-bg);
-}
-
 .professional-content {
     display: flex;
-    flex-direction: column;
-    gap: 50px;
+    align-items: center;
+    gap: 80px;
+}
+
+.prof-image-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.prof-image-wrapper img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+}
+
+.prof-image-decoration {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent-color);
+    z-index: 1;
+    border-radius: 4px;
 }
 
 .prof-text {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.8;
+    flex: 1;
+}
+
+.prof-text h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--secondary-bg);
+    text-align: left;
 }
 
 .prof-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
     margin-bottom: 20px;
-}
-
-.prof-gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-}
-
-.prof-gallery img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.prof-gallery img:hover {
-    transform: scale(1.05);
+    color: rgba(255,255,255,0.9);
 }
 
 @media (max-width: 992px) {
-    .prof-gallery {
-        grid-template-columns: repeat(3, 1fr);
+    .professional-content {
+        flex-direction: column;
+        gap: 50px;
     }
-}
-
-@media (max-width: 768px) {
-    .prof-gallery {
-        grid-template-columns: repeat(2, 1fr);
+    
+    .prof-image-wrapper {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
-}
-
-@media (max-width: 480px) {
-    .prof-gallery {
-        grid-template-columns: 1fr;
+    
+    .prof-text h2 {
+        text-align: center;
+    }
+    
+    .prof-text p {
+        text-align: center;
     }
 }
 
